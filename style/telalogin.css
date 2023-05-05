@@ -1,0 +1,111 @@
+@import url(./style.css);
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--cor-de-fundo);  
+  font-family: var(--fonte-secundaria);
+}
+
+main {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secao__titulo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secao__form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formlogin {
+  text-transform: uppercase;
+  text-align: center;
+  gap: 2em;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--branco);
+  justify-content: center;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  box-shadow: 2px 5px 10px rgb(5, 5, 5);
+}
+
+.formlogin:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--azul);
+}
+
+div#logintext {
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: var(--branco);
+  font-family: var(--fonte-principal);
+}
+
+div#divlogin {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-family: var(--fonte-secundaria);
+  gap: 1em;
+}
+
+.input{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid var(--cor-de-fundo);
+  background:none;
+  padding-bottom: 0.5em;
+  text-align: center; 
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+.input:focus{
+  outline: none;
+  border-bottom-color: var(--azul);
+}
+
+.botao {
+  padding: 0.5em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+  text-transform: uppercase;
+}
+
+.botao:hover {
+  background-color: var(--azul);
+  color: white;
+}
