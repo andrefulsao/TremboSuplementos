@@ -1,18 +1,16 @@
-@import url(reset.css);
 @import url(style.css);
 
-body{
+body {
     background-color: var(--cor-de-fundo);
     font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
     height: 100vh;
     width: 100vw;
-    display: flex;
+
 }
 
-
-header{
+header {
     padding: 0.5em 0;
     display: flex;
     height: 10vh;
@@ -22,19 +20,19 @@ header{
     align-items: center;
 }
 
-.div-logo{
+.div-logo {
     display: flex;
     align-items: center;
     gap: 2em;
 }
 
-.img-logo-titulo{
+.img-logo-titulo {
     font-size: 20px;
     letter-spacing: 0.1em;
     font-weight: 400;
 }
 
-.img-logo-header{
+.img-logo-header {
     width: 40px;
     height: 40px;
     background-image: url(../image/syringe-solid.svg);
@@ -42,14 +40,14 @@ header{
     background-position: center;
 }
 
-.opcoes-menu{
+.opcoes-menu {
     display: flex;
     gap: 1em;
-    font-size: 22px;  
-    font-weight: bold;  
+    font-size: 22px;
+    font-weight: bold;
 }
 
-a{
+.opcoes-menu-item {
     text-decoration: none;
     color: var(--preto);
     text-transform: uppercase;
@@ -58,5 +56,222 @@ a{
 
 /* Estilização de header acima */
 
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100vw;
+}
 
+.principal-opcoes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
 
+.principal-opcoes-cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul);
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 6px 0px var(--preto);
+    transition: all .1s;
+}
+
+.principal-opcoes-cadastrar:active {
+    box-shadow: 0px 2px 0px var(--preto);
+    position: relative;
+    top: 2px;
+}
+
+.principal-opcoes-buscar {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 1em;
+}
+
+.principal-opcoes-buscar-buscar {
+    width: 500px;
+    background-color: var(--branco);
+    color: #242424;
+    font-size: 16px;
+    font-family: var(--fonte-principal);
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--preto);
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+}
+
+.principal-opcoes-buscar-buscar:focus {
+    border-bottom: 2px solid var(--azul);
+    border-radius: 4px 4px 2px 2px;
+}
+
+.principal-opcoes-buscar-buscar:hover {
+    outline: 1px solid lightgrey;
+}
+
+.principal-opcoes-buscar-botao {
+    color: var(--branco);
+    font-size: 16px;
+    background-color: var(--azul);
+    border: 1px solid var(--preto);
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    box-shadow: 0px 6px 0px var(--preto);
+    transition: all .1s;
+}
+
+.principal-opcoes-buscar-botao:active {
+    box-shadow: 0px 2px 0px var(--preto);
+    position: relative;
+    top: 2px;
+}
+
+.principal-opcoes-buscar-label {
+    font-size: 16px;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}
+
+.padrao-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 40px;
+    padding: 10px 38px 10px 16px;
+    background: #fff url("select-arrows.svg") no-repeat right 16px center;
+    background-size: 10px;
+    transition: border-color .1s ease-in-out, box-shadow .1s ease-in-out;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.padrao-select:hover {
+    border: 1px solid #999;
+}
+
+.padrao-select:focus {
+    border: 1px solid #999;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Estilo menu de opções */
+
+.principal-resultado {
+    height: 100%;
+    width: 80%;
+    background-color: var(--branco);
+    border: 1px solid var(--azul);
+}
+
+.principal-resultado-label {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background-color: var(--cor-de-fundo);
+    text-transform: uppercase;
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+    border-bottom: 1px solid var(--preto);
+}
+
+.principal-resultado-label-codigo {
+    width: 20%;
+    margin-left: 1em;
+    border-right: 1px solid var(--preto);
+}
+
+.principal-resultado-label-nome {
+    width: 80%;
+    margin-left: 1em;
+}
+
+.principal-resultado-categoria {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid var(--preto);
+}
+
+.codigo {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-left: 1em;
+}
+
+.nome {
+    width: 20%;
+    margin-left: 1em;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.botao-editar {
+    background-image: url(../image/pen-to-square-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    background-color: var(--branco);
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 20px;
+    width: 60px;
+}
+
+.botao-editar:hover {
+    background-color: rgb(0, 119, 255);
+    transition: 0.5s;
+}
+
+.botao-excluir {
+    background-image: url(../image/xmark-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    background-color: var(--branco);
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 20px;
+    width: 60px;
+}
+
+.botao-excluir:hover {
+    background-color: rgb(189, 0, 0);
+    transition: 0.5s;
+}

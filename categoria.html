@@ -13,24 +13,40 @@
 <body>
     <header>
         <div class="div-logo">
-            <span class="img-logo-header"></span>   
-            <h1 class="img-logo-titulo">TremboSuplementos</h1>         
+            <span class="img-logo-header"></span>
+            <h1 class="img-logo-titulo">TremboSuplementos</h1>
         </div>
         <ul class="opcoes-menu">
-            <li class="opcoes-menu-item"><a href="#">Inicio</a></li>
-            <li class="opcoes-menu-item"><a href="#">Produtos</a></li>
-            <li class="opcoes-menu-item"><a href="./categoria.html">Categorias</a></li>
+            <li><a href="#" class="opcoes-menu-item">Inicio</a></li>
+            <li><a href="#" class="opcoes-menu-item">Produtos</a></li>
+            <li><a href="./categoria.html" class="opcoes-menu-item">Categorias</a></li>
         </ul>
     </header>
-    <main class="principal">    
+    <main class="principal">
         <section class="principal-opcoes">
-            <input type="button">
-        </section>
-        <section class="principal-resultado">
 
-        </section>    
+            <a href="#" class="principal-opcoes-cadastrar">+ Categoria</a>
+
+            <div class="principal-opcoes-buscar">
+                <label for="selecao" class="principal-opcoes-buscar-label">Filtrar por:</label>
+                <select id="selecao" name="selecao" class="padrao-select">
+                    <option value="todos">Todos</option>
+                    <option value="codigo">Codigo</option>
+                    <option value="nome">Nome</option>
+                </select>
+                <input type="search" placeholder="Informe os dados para busca" class="principal-opcoes-buscar-buscar" />
+                <input type="button" value="Buscar" class="principal-opcoes-buscar-botao" id="botao-buscar"/>
+            </div>
+        </section>
+        <section class="principal-resultado" id="principal-resultado">
+            <div class="principal-resultado-label">
+                <p class="principal-resultado-label-codigo">codigo</p>
+                <p class="principal-resultado-label-nome">nome</p>
+            </div>            
+        </section>
 
     </main>
+    <script src="./app/buscarCategoria.js"></script>
 </body>
 
 </html>
