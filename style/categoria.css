@@ -158,7 +158,7 @@ header {
     appearance: none;
     height: 40px;
     padding: 10px 38px 10px 16px;
-    background: #fff url("select-arrows.svg") no-repeat right 16px center;
+    background: #fff;
     background-size: 10px;
     transition: border-color .1s ease-in-out, box-shadow .1s ease-in-out;
     border: 1px solid #ddd;

@@ -13,64 +13,64 @@ botaoBuscar.addEventListener('click', () => {
     const idOuNome = document.getElementById('dadoBusca')
 
     if (valorSelectConvertido === 'todos') {
-        const endpointDaAPI = `http://localhost:8080/categoria`
-        getBuscarCategorias(endpointDaAPI, valorSelectConvertido)
+        const endpointDaAPI = `http://localhost:8080/produto`
+        getBuscarProduto(endpointDaAPI, valorSelectConvertido)
     } else if (valorSelectConvertido === 'codigo') {
         var elementos = []
         verificaElementoJaContem(idOuNome.value, elementos)
         if (elementos.length > 0) {
             return
         } else {
-            const endpointDaAPI = `http://localhost:8080/categoria/${idOuNome.value}`
-            getBuscarCategorias(endpointDaAPI, valorSelectConvertido)
+            const endpointDaAPI = `http://localhost:8080/produto/${idOuNome.value}`
+            getBuscarProduto(endpointDaAPI, valorSelectConvertido)
         }
     } else {
-        const endpointDaAPI = `http://localhost:8080/categoria/nome/${idOuNome.value}`
-        getBuscarCategorias(endpointDaAPI, valorSelectConvertido)
+        const endpointDaAPI = `http://localhost:8080/produto/nome/${idOuNome.value}`
+        getBuscarProduto(endpointDaAPI, valorSelectConvertido)
     }
 
 })
 
 /* Adicionando consumo da API */
 
-async function getBuscarCategorias(endpointDaAPI, valorSelectConvertido) {
-    var categorias = []
+async function getBuscarProduto(endpointDaAPI, valorSelectConvertido) {
+    var produtos = []
     try {
         var consultaCategoria = await fetch(endpointDaAPI)
         if (valorSelectConvertido === 'todos') {
             elementoParaCategoria.innerHTML = '';
-            categorias = await consultaCategoria.json()
+            produtos = await consultaCategoria.json()
         } else if (valorSelectConvertido === 'codigo') {
-            categorias.push(await consultaCategoria.json())
+            produtos.push(await consultaCategoria.json())
         } else {
             elementoParaCategoria.innerHTML = '';
-            categorias = await consultaCategoria.json()
+            produtos = await consultaCategoria.json()
         }
 
-        if (categorias.erro) {
-            throw Error('Erro ao consultar a categoria!');
+        if (produtos.erro) {
+            throw Error('Erro ao consultar a produto!');
         }
 
-        exibirCategoriaNaTela(categorias)
+        exibirProdutoNaTela(produtos)
     } catch (erro) {
 
     }
 
 }
 
-/* Função que exibe as categorias na tela */
+/* Função que exibe as produtos na tela */
 
-function exibirCategoriaNaTela(listaDeCategorias) {
-    listaDeCategorias.forEach(categoria => {
+function exibirProdutoNaTela(listaDeProdutos) {
+    listaDeProdutos.forEach(produto => {
         //let disponibilidade = verificarDisponibilidadeDoLivro(livro)
         elementoParaCategoria.innerHTML += `
-        <div class="principal-resultado-categoria">
-            <p class="codigo">${categoria.id}</p>
-            <p class="nome">${categoria.nome}</p>
+        <div class="principal-resultado-produto">
+            <p class="codigo">${produto.id}</p>
+            <p class="nome">${produto.nome}</p>
             <div class="botoes">
                 <button class="botao-editar">                                                
                 </button>
-                <button class="botao-excluir" id="${categoria.id}">                                                
+                <button class="botao-excluir" id="${produto.id}">                                                
                 </button>
             </div>
         </div>
@@ -106,22 +106,22 @@ function filtrarDado() {
 
 /* Função que envia o id para a API de exclusão e retorna aprensentado na tela os dados restantes */
 async function deleteDado(dado) { 
-    var quantidadeCategorias = document.querySelectorAll('.principal-resultado-categoria')    
+    var quantidadeProdutos = document.querySelectorAll('.principal-resultado-produto')    
     var resposta = false  
     try {
-        var deleteCategoria = await fetch(`http://localhost:8080/categoria/${dado}`, {
+        var deleteProduto = await fetch(`http://localhost:8080/produto/${dado}`, {
             method: 'DELETE',
         })        
-        resposta = await deleteCategoria.json()        
-        if(resposta.length === quantidadeCategorias.length){
+        resposta = await deleteProduto.json()        
+        if(resposta.length === quantidadeProdutos.length){
             alert("Não foi possivel excluir o item")
         }else{
             elementoParaCategoria.innerHTML = '';
-            exibirCategoriaNaTela(resposta)
+            exibirProdutoNaTela(resposta)
         }        
 
         if (resposta.erro) {
-            throw Error('Erro ao consultar a categoria!');
+            throw Error('Erro ao consultar a produto!');
         }
         
     } catch (erro) {
