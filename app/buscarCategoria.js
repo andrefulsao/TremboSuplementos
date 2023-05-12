@@ -66,10 +66,10 @@ function exibirCategoriaNaTela(listaDeCategorias) {
         elementoParaCategoria.innerHTML += `
         <div class="principal-resultado-categoria">
             <p class="codigo">${categoria.id}</p>
-            <p class="nome">${categoria.nome}</p>
+            <p class="nome">${categoria.nome}</p>            
             <div class="botoes">
-                <button class="botao-editar">                                                
-                </button>
+                <button class="botao-editar" id="${categoria.id}">                                                
+                </button>                
                 <button class="botao-excluir" id="${categoria.id}">                                                
                 </button>
             </div>
@@ -78,6 +78,8 @@ function exibirCategoriaNaTela(listaDeCategorias) {
     });
     const btnParaDeletar = document.querySelectorAll('.botao-excluir')
     btnParaDeletar.forEach(btn => btn.addEventListener('click', filtrarDado))
+    const btnParaEditar = document.querySelectorAll('.botao-editar')
+    btnParaEditar.forEach(btn => btn.addEventListener('click', editarDados))
 }
 
 /* Função que verifica se o elemento já existe na tela quando a consulta for por codigo 
@@ -130,35 +132,8 @@ async function deleteDado(dado) {
 
 }
 
-/* 
-async function cadastrarTeste() { 
-    var quantidadeCategorias = document.querySelectorAll('.principal-resultado-categoria')        
-    var resposta = false  
-    try {
-        var cadastrarCategoria = await fetch('http://localhost:8080/categoria', {
-            method: 'POST',
-            body: JSON.stringify({
-                nome: "testebom"
-            }),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        })        
-        resposta = await cadastrarCategoria.json()        
-        if(resposta.length === quantidadeCategorias.length){
-            alert("Não foi possivel excluir o item")
-        }else{
-            elementoParaCategoria.innerHTML = '';
-            exibirCategoriaNaTela(resposta)
-        }        
-
-        if (resposta.erro) {
-            throw Error('Erro ao consultar a categoria!');
-        }
-        
-    } catch (erro) {
-
-    }
-
+function editarDados(){
+    const elementoBtn = document.getElementById(this.id)
+    localStorage.setItem("id", JSON.stringify(elementoBtn.id))
+    window.location.href = "http://127.0.0.1:5500/TremboSuplemento/editarCategoria.html";         
 }
-*/

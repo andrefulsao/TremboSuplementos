@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/cadastroCategoria.css">
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
+    <title>Cadastrar Categoria</title>
+</head>
+
+<body>
+    <header>
+        <div class="div-logo">
+            <span class="img-logo-header"></span>
+            <h1 class="img-logo-titulo">TremboSuplementos</h1>
+        </div>
+        <ul class="opcoes-menu">
+            <li><a href="#" class="opcoes-menu-item">Inicio</a></li>
+            <li><a href="./produto.html" class="opcoes-menu-item">Produtos</a></li>
+            <li><a href="./categoria.html" class="opcoes-menu-item">Categorias</a></li>
+        </ul>
+    </header>
+    <main class="principal">
+        <section class="principal-opcoes">
+
+            <a href="./categoria.html" class="principal-opcoes-cadastrar" id="botao-voltar">Voltar</a>
+            <h1 class="principal-titulo-texto">Cadastro de Categorias</h1>
+            <div class="principal-opcoes-buscar">
+                <input type="button" value="Cadastrar" class="principal-opcoes-buscar-botao" id="botao-cadastrar" />
+            </div>
+        </section>
+        <section class="principal-resultado" id="principal-resultado">
+            <form class="principal-resultado-descricao">
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Informe descrição da categoria:</h2>
+                    <input type="text" id="descricao" class="principal-opcoes-buscar-buscar">
+                </div>
+            </form>
+            <div class="principal-resultado-checkbox">
+                <form class="principal-resultado-checkbox-checkbox">
+                    <h2 class="descricao">Habilitar campos para o produto:</h2>
+                    <div>
+                        <input type="checkbox" id="sabor" name="sabor" value="sabor">
+                        <label for="sabor"> Habilitar campo sabor</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="proteina" name="proteina" value="proteina">
+                        <label for="proteina"> Habilitar campo proteina</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="carboidrato" name="carboidrato" value="carboidrato">
+                        <label for="carboidrato"> Habilitar campo carboidrato</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sodio" name="sodio" value="sodio">
+                        <label for="sodio"> Habilitar campo sodio</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="gorduras_totais" name="gorduras_totais" value="gorduras_totais">
+                        <label for="gorduras_totais"> Habilitar campo gorduras totais</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="gorduras_saturadas" name="gorduras_saturadas"
+                            value="gorduras_saturadas">
+                        <label for="gorduras_saturadas"> Habilitar campo gorduras saturadas</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="gorduras_trans" name="gorduras_trans" value="gorduras_trans">
+                        <label for="gorduras_trans"> Habilitar campo gorduras trans</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cafeina" name="cafeina" value="cafeina">
+                        <label for="cafeina"> Habilitar campo cafeina</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="creatina" name="creatina" value="creatina">
+                        <label for="creatina"> Habilitar campo creatina</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="beta_alanina" name="beta_alanina" value="beta_alanina">
+                        <label for="beta_alanina"> Habilitar campo beta alanina</label>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="./app/cadastrarCategoria.js"></script>
+</body>
+
+</html>

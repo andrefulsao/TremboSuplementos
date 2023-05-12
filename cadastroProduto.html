@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/cadastroProduto.css">
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
+    <title>Cadastrar Produtos</title>
+</head>
+
+<body>
+    <header>
+        <div class="div-logo">
+            <span class="img-logo-header"></span>
+            <h1 class="img-logo-titulo">TremboSuplementos</h1>
+        </div>
+        <ul class="opcoes-menu">
+            <li><a href="#" class="opcoes-menu-item">Inicio</a></li>
+            <li><a href="./produto.html" class="opcoes-menu-item">Produtos</a></li>
+            <li><a href="./categoria.html" class="opcoes-menu-item">Categorias</a></li>
+        </ul>
+    </header>
+    <main class="principal">
+        <section class="principal-opcoes">
+
+            <a href="./produto.html" class="principal-opcoes-cadastrar" id="botao-voltar">Voltar</a>
+            <h1 class="principal-titulo-texto">Cadastro de Produtos</h1>
+            <div class="principal-opcoes-buscar">
+                <input type="button" value="Cadastrar" class="principal-opcoes-buscar-botao" id="botao-cadastrar-produto" />
+            </div>
+        </section>
+        <section class="principal-resultado" id="principal-resultado">
+            <form class="principal-resultado-descricao">
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Descrição:</h2>
+                    <input type="text" id="descricao" class="principal-opcoes-buscar-buscar">
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Estoque:</h2>
+                    <input type="text" id="quantidade" class="principal-opcoes-buscar-buscar">
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Valor:</h2>
+                    <input type="text" id="valor" class="principal-opcoes-buscar-buscar">
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Conteúdo:</h2>
+                    <input type="text" id="conteudo" class="principal-opcoes-buscar-buscar">
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Porção:</h2>
+                    <input type="text" id="porcao" class="principal-opcoes-buscar-buscar">
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Valor Energético:</h2>
+                    <input type="text" id="valor_energetico" class="principal-opcoes-buscar-buscar">
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <label for="selecao" class="descricao">Filtrar por:</label>
+                    <select id="selecao_categoria-produto" name="selecao" class="padrao-select"> 
+                        <option value="nada"></option>                          
+                    </select>
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Sabor:</h2>
+                    <input type="text" id="sabor" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao">
+                    <h2 class="descricao">Proteinas:</h2>
+                    <input type="text" id="proteina" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+            </form>   
+            <form class="principal-resultado-descricao-segundo">
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Carboidratos:</h2>
+                    <input type="text" id="carboidrato" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Sódio:</h2>
+                    <input type="text" id="sodio" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Gorduras Totais:</h2>
+                    <input type="text" id="gorduras_totais" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Gorduras Saturadas:</h2>
+                    <input type="text" id="gorduras_saturadas" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Gorduras Trans:</h2>
+                    <input type="text" id="gorduras_trans" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Cafeína:</h2>
+                    <input type="text" id="cafeina" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Creatina:</h2>
+                    <input type="text" id="creatina" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+                <div class="principal-resultado-descricao-descricao-segundo">
+                    <h2 class="descricao">Beta Alanina:</h2>
+                    <input type="text" id="beta_alanina" class="principal-opcoes-buscar-buscar" disabled="disabled">
+                </div>
+            </form>                           
+        </section>
+    </main>
+    <script src="./app/cadastrarProduto.js"></script>
+</body>
+
+</html>
