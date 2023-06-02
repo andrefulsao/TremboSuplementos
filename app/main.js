@@ -17,7 +17,7 @@ async function getValidarUsuarioAPI(endpointDaAPI) {
 
 function validarUsuario(resposta){
     if(resposta === true){
-        window.location.href = "http://127.0.0.1:5500/TremboSuplemento/categoria.html";
+        window.location.href = "http://127.0.0.1:5500/TremboSuplemento/Inicio.html";
     }else{
         alert('Usuario ou senha incorreta!')
     }
